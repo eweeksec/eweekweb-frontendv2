@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
+@font-face {
+  font-family: westernHeading;
+  src: url('fonts/westernHeading.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: western3;
+  src: url('fonts/Amaranth-Regular.ttf') format('truetype');
+}
+
+html,body {
+  background: linear-gradient(rgb(255,255,255), rgb(255,255,255));
+  /*background-image: url("../pages/home/galaxy.jpeg");*/
+  background-repeat: repeat;
+  font-size: 100%;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  height: 100%;
+  width: 100%;
+  /* cursor: url(https://cdn.custom-cursor.com/db/cursor/32/Infinity_Gauntlet_Cursor.png) , default!important; */
+  
+}
+/* a,
+button {
+  cursor: url(https://cdn.custom-cursor.com/db/pointer/32/Infinity_Gauntlet_Pointer.png) , pointer!important;
+} */
+
+h1, h2, h3, h4, h5 {
+  margin-bottom: .5rem;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.2;
+  color: inherit;
+}
+
+h1 {
+  font-family: 'westernHeading', sans-serif;
+  letter-spacing: 4px;
+}
+
+h2, h4, h5 {
+  font-family: 'westernHeading', sans-serif;
+}
+
+h3 {
+  font-family: 'westernHeading', sans-serif;
+}
+
+h1.leftHeader {
+  text-align: left;
+  font-size: 400%;
+  margin: 20px 0px 0px 50px;
+}
+
+li {
+  list-style-type: disc;
+  margin-left: 20px;
+  font-family: 'western3', sans-serif;
+}
+
+p {
+  font-family: 'Inter',  sans-serif;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+}
+
+.wrapper {
+  margin: 30px;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --navbar-bg-color: #f8f9fa; /* Adjust this color based on your navbar background */
+  --navbar-text-color: #333;  /* Adjust this color based on your navbar text */
+  --primary-color: #d9534f; /* Example primary color for buttons or highlights */
+  --link-hover-color: #0056b3; /* Color for link hover state */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 28, 30, 32;
+    --background-end-rgb: 28, 30, 32;
+    --navbar-bg-color: #333;
+    --navbar-text-color: #f8f9fa;
+    --primary-color: #d9534f; /* Example primary color for dark mode */
+    --link-hover-color: #49a6e9; /* Color for link hover state in dark mode */
+  }
+  .countDownNums {
+    color: #333;
+    font-family: 'westernHeading', sans-serif;
+    text-align: center;
+  }
+}
+
+@media only screen
+and (max-width: 800px) {
+    .mobileDisappear {
+        display: none;
+    }
+
+    .homeButtons {
+        display: inline;
+    }
+
+    .homeFeature {
+        margin-left: 20px;
+        width: 40%;
+    }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Navigation */
+
+.appBar {
+  background-color: #a52a2a; /* Replace with the gradient or colors from your image */
+  /* You can use a gradient like this, adjust the colors to match your image */
+  background-image: linear-gradient(to right, #ff7e5f, #feb47b); 
+  /* Add other styles here to match the image */
+  height: 65px;
+  width: 100vw;
+  position: fixed;
+  @media screen and (max-width: 600px) {
+    height: 57px;
+  }
+}
+
+.menuButton {
+  margin-right: 16px; /* Assuming a base spacing of 8px */
+  display: none;
+}
+
+/* Media query to handle mobile view */
+@media (max-width: 600px) {
+  .menuButton {
+      display: block;
+  }
+}
+
+/* Home.css */
+.home-container {
+  font-family: 'Arial', sans-serif;
+  color: #333; /* Use the colors from the image */
+  text-align: center;
+}
+
+.home-header {
+  background-color: #a52a2a; /* Adjust based on the image */
+  padding: 20px;
+  color: white;
+}
+
+.countdown-container {
+  background-color: #8B4513; /* Adjust based on the image */
+  padding: 10px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.countDownNums {
+  color: #333;
+  font-family: 'westernHeading', sans-serif;
+  text-align: center;
+}
+
+.typographySub {
+  color: #333;
+  font-family: 'western3', sans-serif;
+  text-align: left;
+}
+

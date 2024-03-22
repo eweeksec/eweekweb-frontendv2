@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
+@font-face {
+  font-family: westernHeading;
+  src: url('fonts/westernHeading.ttf');
+}
+
+@font-face {
+  font-family: western3;
+  src: url('fonts/Amaranth-Regular.ttf');
+}
+
+.headerContentWrapper {
+  padding-top: 20px;
+}
+
+h1.leftHeader {
+  font-size: 300%;
+  margin: 10px 0 0 0;
+}
+
+.dualTone {
+  text-align: left !important;
+  background: -webkit-linear-gradient(360deg,  #BB6A7D,  #C6632D, #3A1701);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 60px;
+  line-height: 1.2;
+}
+
+.headerSubheader {
+  margin-bottom: 0px;
+  text-align: left;
+  font-size: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .headerSubheader {
+    color: black;
+  }
+}
+
+.basicContentWrapper {
+  /* margin: 50px 0 50px 0; */
+  padding-block: 10;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.basicContentWrapperBody {
+  border-radius: 15px;
+  background: white;
+  text-align: left;
+  padding: 20px 40px 10px 40px;
+  line-height: 35px;
+  font-size: 15px;
+  color: black;
+  font-family: 'westernHeading', sans-serif;
+}
+
+.basicContentTitle {
+  margin-bottom: 10px;
+}
+
+.basicContentWrapper h2 {
+  color: white;
+  font-size: 25px;
+  padding: 20px 35px 2px 35px;
+  text-align: left !important;
+  /* background-image: linear-gradient(to right, #007BFF ,#6ACCE1); 78cbe3 */
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.menuContentWrapper h2 {
+  text-align: left;
+}
+
+ul.menuContentWrapperList, ol.menuContentWrapperList {
+  margin-bottom: 0;
+}
+
+.menuContentWrapperBody {
+  border-radius: 15px;
+  background: white;
+  text-align: left;
+  padding: 20px 40px 10px 40px;
+  line-height: 35px;
+  font-size: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.menuWrapper {
+  margin-left: 22px;
+  /* margin-right: 22px;
+  height: 62px;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; */
+}
+
+.menuOption {
+  font-family: "Poppins", sans-serif;
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  margin: 14px 3px;
+  padding: 5px 10px;
+}
+
+.menuOption:hover, .menuOption:focus {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.menuOptionSelected {
+  background-color: rgba(255, 255, 255, 0.40);
+  border-radius: 7px;
+}
+
+.blueWrapper {
+  background: linear-gradient(to right,   #BB6A7D,  #C6632D, #3A1701);
+  border-radius: 15px;
+}
+
+.redWrapper {
+  background: linear-gradient(to right, #9E0905 4.06%, #E49774 95.71%);
+  border-radius: 15px;
+}
+
+.orangeWrapper {
+  background: linear-gradient(to right, #c96028 10%, #f7af58 92.5%);
+  border-radius: 15px;
+}
+
+.greenWrapper {
+  background: linear-gradient(to right, #F4B230 10%, #ECCE93 90%);
+  /* background: linear-gradient(to right, #15DD65 0%, #08D1BD 96.38%, #08A1D1 100%); */
+  border-radius: 15px;
+}
+
+.purpleWrapper {
+  background: linear-gradient(to right, #DA4725 0%, #F4B230 100%);
+  border-radius: 15px;
+}
+
+.longgieWrapper {
+  background: linear-gradient(to right, #800000 0%, #bf5700 100%);
+  border-radius: 15px;
+}
+
+@media only screen
+and (max-width: 800px) {
+  .dualTone {
+      font-size: 40px;
+      letter-spacing: 2px;
+  }
+
+  .menuContentWrapper h2 {
+      margin-left: 10px;
+  }
+
+  .headerSubheader {
+      font-size: 15px;
+  }
+}
+
+/** Calendar **/
+/* Calendar.css */
+.calendar {
+  font-family: 'Arial', sans-serif;
+  color: #333; /* Use the colors from the image */
+  text-align: center;
+  background-color: #3178c6;
+}
+
+.calendar-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.day-column {
+  border: 1px solid rebeccapurple;
+  padding: 10px;
+}
+
+.event {
+  background-color: red;
+  margin: 10px 0;
+  padding: 5px;
+  border-left: 5px solid #3178c6; /* Change the color to differentiate event types or based on other criteria */
+}
+
+.eventSubHeader {
+  font-family: westernHeading, sans-serif;
+}
+
+/* Adjust below as necessary for your layout */
+/* h1, h3, h4, p {
+  margin: 0;
+  padding: 2px 0;
+} */
